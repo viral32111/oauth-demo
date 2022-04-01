@@ -13,6 +13,10 @@
 		"email": "contact@viral32111.com",
 		"url": "https://viral32111.com"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://viral32111.com/repositories/oauth-demo"
+	},
 	"license": "UNLICENSED",
 	"private": true,
 	"devDependencies": {
