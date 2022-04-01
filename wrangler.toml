@@ -1,0 +1,11 @@
+name = "oauth-demo"
+type = "javascript"
+
+route = ""
+zone_id = ""
+workers_dev = true
+
+usage_model = ""
+
+compatibility_flags = []
+compatibility_date = "2022-03-31"
