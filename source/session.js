@@ -1,6 +1,9 @@
 const SESSION_COOKIE_NAME = "Session"
 
-export const getSessionIdentifier = async ( headers ) => {
+export const fetchSession = ( identifier ) => SESSION.get( identifier, { type: "json" } )
+export const storeSession = ( identifier, session ) => SESSION.put( identifier, JSON.stringify( session ) )
+
+export const ensureSession = async ( headers ) => {
 	if ( headers.has( "cookie" ) ) {
 		const cookies = {}
 
@@ -11,39 +14,44 @@ export const getSessionIdentifier = async ( headers ) => {
 
 		if ( "__Secure-" + SESSION_COOKIE_NAME in cookies ) {
 			const identifier = cookies[ "__Secure-" + SESSION_COOKIE_NAME ]
+			const session = await fetchSession( identifier )
 
-			if ( await SESSION.get( identifier ) ) return identifier
+			if ( session ) return {
+				identifier: identifier,
+				data: session,
+				header: null
+			}
 		}
 	}
 
-	return false
-}
-
-export const createSession = async ( headers ) => {
 	const identifier = crypto.randomUUID().replaceAll( "-", "" )
+	const session = {}
 
-	await SESSION.put( identifier, JSON.stringify( {} ) )
+	await storeSession( identifier, session )
 
-	return [ identifier, {
-		"Set-Cookie": [
-			"__Secure-" + SESSION_COOKIE_NAME + "=" + identifier,
-			"Domain=" + headers.get( "host" ),
-			"Path=/",
-			"Secure",
-			"HttpOnly",
-			"SameSite=Lax"
-		].join( "; " )
-	} ]
+	return {
+		identifier: identifier,
+		data: session,
+		header: {
+			"Set-Cookie": [
+				"__Secure-" + SESSION_COOKIE_NAME + "=" + identifier,
+				"Domain=" + headers.get( "host" ),
+				"Path=/",
+				"Secure",
+				"HttpOnly",
+				"SameSite=Lax"
+			].join( "; " )
+		}
+	}
 }
 
-export const fetchSession = async ( identifier ) => {
-	const a = JSON.parse( await SESSION.get( identifier ) )
-	console.log( "FETCH", identifier, a )
-	return a
-}
+export const eraseSession = async ( identifier, headers ) => {
+	await SESSION.delete( identifier )
 
-export const storeSession = async ( identifier, session ) => {
-	const b = JSON.stringify( session )
-	await SESSION.put( identifier, b )
-	console.log( "STORE", identifier, b )
+	return [
+		"__Secure-" + SESSION_COOKIE_NAME + "=",
+		"Expires=Thu, 01 Jan 1970 00:00:00 GMT",
+		"Domain=" + headers.get( "host" ),
+		"Path=/"
+	].join( "; " )
 }
