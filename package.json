@@ -2,11 +2,13 @@
 	"name": "oauth-demo",
 	"version": "0.1.0",
 	"description": "Demonstration of various OAuth integrations using Cloudflare Workers.",
-	"main": "tsc/main.js",
+	"main": "source/main.js",
+	"type": "module",
 	"scripts": {
-		"build": "npx tsc",
-		"test": "npx tsc && wrangler dev",
-		"publish": "npx tsc && wrangler publish"
+		"test": "wrangler dev",
+		"build": "wrangler build",
+		"publish": "wrangler publish",
+		"log": "wrangler tail --format pretty"
 	},
 	"author": {
 		"name": "viral32111",
@@ -18,9 +20,5 @@
 		"url": "https://viral32111.com/repositories/oauth-demo"
 	},
 	"license": "UNLICENSED",
-	"private": true,
-	"devDependencies": {
-		"@cloudflare/workers-types": "^3.4.0",
-		"typescript": "^4.6.3"
-	}
+	"private": true
 }

@@ -1,5 +1,5 @@
 name = "oauth-demo"
-type = "javascript"
+type = "webpack"
 
 route = ""
 zone_id = ""
@@ -9,3 +9,11 @@ usage_model = ""
 
 compatibility_flags = []
 compatibility_date = "2022-03-31"
+
+# [secrets]
+# CLIENT_ID
+# CLIENT_SECRET
+
+kv_namespaces = [
+	{ binding = "SESSION", id = "5702cebd002741f094f46b8f05021e21", preview_id = "57186ecbb3074b0da8765f31a341c4df" }
+]
