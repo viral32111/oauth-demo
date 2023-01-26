@@ -1,0 +1,39 @@
+/* Light theme */
+@media ( prefers-color-scheme: light ) {
+	
+	/* Dark text on light background */
+	body {
+		background-color: #ffffff;
+		color: #262626;
+	}
+
+	/* Lighter footer */
+	footer { color: #969393; }
+	footer a { color: #3b8ed4; }
+
+	/* Easier to see links */
+	a { color: #007de3; }
+
+	.tip { color: #454444; }
+
+}
+
+/* Dark theme */
+@media ( prefers-color-scheme: dark ) {
+
+	/* Light text on dark background */
+	body {
+		background-color: #1c1c1c;
+		color: #dddddd;
+	}
+
+	/* Dimmer footer */
+	footer { color: #757575; }
+	footer a { color: #007ab3; }
+
+	/* Easier to see links */
+	a { color: #0095ff; }
+
+	.tip { color: #cccccc; }
+
+}

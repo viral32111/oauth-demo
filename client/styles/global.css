@@ -1,0 +1,38 @@
+/* Font */
+body {
+	font-family: Verdana, sans-serif;
+}
+
+/* Only underline links on hover */
+a { text-decoration: inherit; }
+a:hover { text-decoration: underline; }
+
+/* Less spacing above & below headings */
+h1, h2, h3, h4, h5, h6 {
+	margin: 20px 0px 5px 0px;
+}
+
+/* No spacing above the first heading */
+h1 { margin-top: 0px; }
+
+/* Less spacing between paragraphs */
+p { margin: 5px 0px 5px 0px; }
+
+/* Less spacing for lists */
+ul { margin: 5px 0px 0px 0px; }
+li {
+	margin: 0px;
+	margin-left: -15px;
+}
+
+/* Smaller font size & move down for footer */
+footer {
+	font-size: 14px;
+	margin-top: 20px;
+}
+
+/* Smaller font size & italic for tips */
+.tip {
+	font-size: 14px;
+	font-style: italic;
+}
