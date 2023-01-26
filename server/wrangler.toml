@@ -1,0 +1,6 @@
+name = "oauth-demo"
+main = "./source/main.ts"
+compatibility_date = "2023-01-26"
+
+# Do not send usage metrics
+send_metrics = false
