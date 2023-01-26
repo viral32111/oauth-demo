@@ -23,7 +23,7 @@
 		"integration",
 		"cloudflare-workers"
 	],
-	"license": "UNLICENSED",
+	"license": "AGPL-3.0-only",
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20230115.0",
 		"@typescript-eslint/eslint-plugin": "^5.49.0",
