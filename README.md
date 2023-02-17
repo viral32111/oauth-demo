@@ -1,8 +1,6 @@
 # OAuth
 
-Demonstration of integrating the [OAuth 2.0 standard](https://oauth.net/2/) with popular providers to enable quick & secure account management.
-
-The [client-side project](client/) runs on [Cloudflare Pages](https://pages.cloudflare.com/), and the [server-side project](server/) runs on [Cloudflare Workers](https://workers.cloudflare.com/).
+This is a full-stack web application running on [Cloudflare Pages](https://pages.cloudflare.com/), for demonstrating integrating the [OAuth 2.0 standard](https://oauth.net/2/) with popular providers to enable quick and secure account management.
 
 ## License
 

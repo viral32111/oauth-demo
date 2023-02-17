@@ -1,5 +1,0 @@
-# NPM packages
-node_modules/
-
-# TypeScript output
-browser/scripts/
