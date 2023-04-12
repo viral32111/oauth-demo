@@ -2,12 +2,10 @@
 	"name": "oauth-demo",
 	"version": "2.0.0",
 	"description": "Examples of OAuth integration with various services.",
-	"main": "./source/main.ts",
 	"scripts": {
-		"start": "npx wrangler dev",
-		"build": "npx wrangler build",
-		"publish": "npx wrangler publish",
-		"log": "npx wrangler tail --format pretty"
+		"start": "npx wrangler pages dev --ip 127.0.0.1 ./browser",
+		"publish": "npx wrangler pages publish ./browser",
+		"build": "npx tsc"
 	},
 	"author": {
 		"name": "viral32111",
@@ -24,13 +22,13 @@
 		"cloudflare-workers"
 	],
 	"license": "AGPL-3.0-only",
+	"private": false,
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20230404.0",
-		"@typescript-eslint/eslint-plugin": "^5.57.1",
-		"@typescript-eslint/parser": "^5.57.1",
+		"@typescript-eslint/eslint-plugin": "^5.58.0",
+		"@typescript-eslint/parser": "^5.58.0",
 		"eslint": "^8.38.0",
 		"typescript": "^5.0.4",
-		"vitest": "^0.30.0",
 		"wrangler": "^2.15.0"
 	}
 }

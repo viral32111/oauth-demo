@@ -1,4 +1,4 @@
-# OAuth
+# OAuth Demo
 
 Examples of OAuth integration with various services.
 

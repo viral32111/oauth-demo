@@ -1,23 +1,30 @@
 {
 	"compilerOptions": {
-		"target": "es2021",
-		"lib": [ "es2021" ],
-		"jsx": "react",
+		"sourceRoot": "./scripts/",
+		"inlineSourceMap": true,
+		"outDir": "./browser/scripts/",
+
 		"module": "es2022",
+		"target": "es2016",
+
 		"moduleResolution": "node",
-		"types": [
-			"@cloudflare/workers-types",
-			"jest"
-		],
-		"resolveJsonModule": true,
-		"allowJs": true,
-		"checkJs": false,
-		"noEmit": true,
-		"isolatedModules": true,
 		"allowSyntheticDefaultImports": true,
-		"forceConsistentCasingInFileNames": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+
 		"strict": true,
-		"skipLibCheck": true,
-		"rootDir": "./source/"
-	}
+		"noImplicitAny": true,
+		"removeComments": true,
+		"forceConsistentCasingInFileNames": true,
+
+		"skipLibCheck": true
+	},
+	"exclude": [
+		"node_modules/",
+		"browser/",
+		"functions/"
+	],
+	"include": [
+		"./scripts/**/*"
+	]
 }

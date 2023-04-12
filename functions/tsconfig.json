@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"sourceRoot": "./",
+		"inlineSourceMap": true,
+		"noEmit": true,
+
+		"module": "es2022",
+		"target": "es2021",
+		"lib": [ "es2021" ],
+		"jsx": "react",
+		"types": [ "@cloudflare/workers-types" ],
+
+		"moduleResolution": "node",
+		"resolveJsonModule": true
+	},
+	"include": [
+		"./**/*"
+	]
+}

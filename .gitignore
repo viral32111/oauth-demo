@@ -1,2 +1,5 @@
-# NPM Packages
+# NPM packages
 node_modules/
+
+# JavaScript
+browser/scripts/
