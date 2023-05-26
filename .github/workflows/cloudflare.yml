@@ -1,0 +1,45 @@
+name: Cloudflare
+
+on:
+  push:
+    paths:
+      - '.github/workflows/cloudflare.yml'
+      - 'browser/**'
+      - 'functions/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig.json'
+      - '.eslintrc.json'
+      - 'wrangler.toml'
+    branches:
+      - '**'
+    tags:
+      - '*.*.*'
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-22.04
+    environment:
+      name: Development
+      url: ${{ steps.publish.outputs.alias }}
+    concurrency:
+      group: deploy-development
+      cancel-in-progress: true
+    permissions:
+      contents: read
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Get repository name
+        run: echo "REPOSITORY_NAME=$(basename \"${{ github.repository }}\")" >>> $GITHUB_ENV
+
+      - name: Publish to Cloudflare Pages
+        id: publish
+        uses: cloudflare/pages-action@v1
+        with:
+          projectName: ${{ env.REPOSITORY_NAME }}
+          branch: development
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiKey: ${{ secrets.CLOUDFLARE_API_KEY }}

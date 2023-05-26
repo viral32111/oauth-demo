@@ -3,3 +3,7 @@ compatibility_date = "2023-01-26"
 
 # Disable anonymous usage metrics
 send_metrics = false
+
+# Workers Sites (Cloudflare Pages)
+[site]
+bucket = "./browser/"
