@@ -93,7 +93,6 @@ jobs:
     needs: build
     permissions:
       contents: read
-      deployments: write
     environment:
       name: cloudflare-pages
       url: ${{ steps.deploy-to-pages.outputs.url }}
@@ -118,4 +117,3 @@ jobs:
           projectName: oauth-demo
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
