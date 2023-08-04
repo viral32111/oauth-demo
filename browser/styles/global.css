@@ -13,13 +13,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* No spacing above the first heading */
-h1 { margin-top: 0px; }
+h1 {
+	margin-top: 0px;
+}
 
 /* Less spacing between paragraphs */
-p { margin: 5px 0px 5px 0px; }
+p {
+	margin: 5px 0px 5px 0px;
+}
 
 /* Less spacing for lists */
-ul { margin: 5px 0px 0px 0px; }
+ul {
+	margin: 5px 0px 0px 0px;
+}
 li {
 	margin: 0px;
 	margin-left: -15px;
@@ -29,10 +35,4 @@ li {
 footer {
 	font-size: 14px;
 	margin-top: 20px;
-}
-
-/* Smaller font size & italic for tips */
-.tip {
-	font-size: 14px;
-	font-style: italic;
 }

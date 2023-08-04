@@ -14,8 +14,6 @@
 	/* Easier to see links */
 	a { color: #007de3; }
 
-	.tip { color: #454444; }
-
 }
 
 /* Dark theme */
@@ -33,7 +31,5 @@
 
 	/* Easier to see links */
 	a { color: #0095ff; }
-
-	.tip { color: #cccccc; }
 
 }
