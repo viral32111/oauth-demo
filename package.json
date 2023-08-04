@@ -19,9 +19,9 @@
 		"url": "https://github.com/viral32111/oauth-demo"
 	},
 	"keywords": [
-		"oauth",
+		"oauth2",
 		"integration",
-		"cloudflare-workers"
+		"cloudflare-pages"
 	],
 	"license": "AGPL-3.0-only",
 	"private": false,

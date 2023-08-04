@@ -3,3 +3,6 @@ node_modules/
 
 # JavaScript
 browser/scripts/
+
+# Environment Variables
+.dev.vars

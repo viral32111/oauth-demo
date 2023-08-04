@@ -31,8 +31,8 @@
 		<link rel="canonical" content="https://oauth-demo.pages.dev/">
 
 		<!-- Include our own stylesheets -->
-		<link rel="stylesheet" href="styles/global.css" type="text/css">
-		<link rel="stylesheet" href="styles/theme.css" type="text/css">
+		<link rel="stylesheet" href="/styles/global.css" type="text/css">
+		<link rel="stylesheet" href="/styles/theme.css" type="text/css">
 	</head>
 	<body>
 		<!-- Title & description in header -->
@@ -44,23 +44,25 @@
 		<!-- Instructions in main content -->
 		<main>
 			<h2>Get Started</h2>
-			<p>You are <strong>not</strong> signed in yet, so begin by signing in with your favourite provider below.</p>
+			<p>You are <strong>not</strong> signed in yet, so begin by clicking your favourite provider listed below!</p>
 			<ul>
-				<li><a href="/functions/sign-in/discord">Discord</a></li>
+				<li><a href="/authorize/discord">Discord</a></li>
 				<!--
-				<li><a href="/functions/sign-in/google">Google</a></li>
-				<li><a href="/functions/sign-in/microsoft">Microsoft</a></li>
-				<li><a href="/functions/sign-in/apple">Apple</a></li>
-				<li><a href="/functions/sign-in/twitter">Twitter</a></li>
-				<li><a href="/functions/sign-in/reddit">Reddit</a></li>
-				<li><a href="/functions/sign-in/twitch">Twitch</a></li>
-				<li><a href="/functions/sign-in/github">GitHub</a></li>
-				<li><a href="/functions/sign-in/steam">Steam</a></li>
+				<li><a href="/authorize/google">Google</a></li>
+				<li><a href="/authorize/microsoft">Microsoft</a></li>
+				<li><a href="/authorize/apple">Apple</a></li>
+				<li><a href="/authorize/twitter">Twitter</a></li>
+				<li><a href="/authorize/reddit">Reddit</a></li>
+				<li><a href="/authorize/twitch">Twitch</a></li>
+				<li><a href="/authorize/github">GitHub</a></li>
+				<li><a href="/authorize/steam">Steam</a></li>
 				-->
 			</ul>
 
+			<br>
+
 			<p>You will be redirected to the provider's website, then prompted to grant this website access your account's information.</p>
-			<p>The prompt on the provider's website <em>should</em> inform you about the information this website is requesting.</p>
+			<p>The prompt on the provider's website <em>should</em> inform you about the specific account information we are requesting.</p>
 		</main>
 
 		<!-- Repository & author in footer -->
@@ -74,6 +76,6 @@
 
 		<!-- Include jQuery & our own scripts -->
 		<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha384-NXgwF8Kv9SSAr+jemKKcbvQsz+teULH/a5UNJvZc6kP47hZgl62M1vGnw6gHQhb1" crossorigin="anonymous"></script>
-		<script src="scripts/example.js"></script>
+		<script src="/scripts/example.js"></script>
 	</body>
 </html>
