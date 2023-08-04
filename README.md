@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/viral32111/oauth-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/viral32111/oauth-demo/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/viral32111/oauth-demo/actions/workflows/codeql.yml/badge.svg)](https://github.com/viral32111/oauth-demo/actions/workflows/codeql.yml)
+![GitHub deployments](https://img.shields.io/github/deployments/viral32111/oauth-demo/github-pages?label=GitHub%20Pages)
+![GitHub deployments](https://img.shields.io/github/deployments/viral32111/oauth-demo/cloudflare-pages?label=Cloudflare%20Pages)
 ![GitHub tag (with filter)](https://img.shields.io/github/v/tag/viral32111/oauth-demo?label=Latest)
 ![GitHub repository size](https://img.shields.io/github/repo-size/viral32111/oauth-demo?label=Size)
 ![GitHub release downloads](https://img.shields.io/github/downloads/viral32111/oauth-demo/total?label=Downloads)
