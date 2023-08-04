@@ -115,7 +115,7 @@ jobs:
         uses: cloudflare/pages-action@v1
         with:
           directory: browser
-          projectName: ${{ github.repository }}
+          projectName: oauth-demo
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
