@@ -7,7 +7,7 @@
 ![GitHub release downloads](https://img.shields.io/github/downloads/viral32111/oauth-demo/total?label=Downloads)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/viral32111/oauth-demo?label=Commits)
 
-Examples of OAuth integration with various services.
+This is a web application running on [Cloudflare Pages](https://pages.cloudflare.com) and [Cloudflare Workers](workers.cloudflare.com) for demonstrating integrations of the [OAuth 2.0 standard](https://oauth.net/2/) with popular providers.
 
 ## ⚖️ License
 

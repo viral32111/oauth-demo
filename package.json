@@ -1,11 +1,13 @@
 {
 	"name": "oauth-demo",
 	"version": "2.0.0",
-	"description": "Examples of OAuth integration with various services.",
+	"description": "Demonstration of OAuth 2.0 integration with various providers.",
 	"scripts": {
-		"start": "npx wrangler pages dev --ip 127.0.0.1 ./browser",
-		"publish": "npx wrangler pages publish ./browser",
-		"build": "npx tsc"
+		"lint": "npx eslint .",
+		"build": "npx tsc",
+		"dev": "npx wrangler pages dev --ip 127.0.0.1 browser",
+		"publish": "npx wrangler pages publish browser",
+		"clean": "rm --verbose --recursive browser/scripts/*.js"
 	},
 	"author": {
 		"name": "viral32111",
@@ -17,7 +19,7 @@
 		"url": "https://github.com/viral32111/oauth-demo"
 	},
 	"keywords": [
-		"oauth2",
+		"oauth",
 		"integration",
 		"cloudflare-workers"
 	],
@@ -26,7 +28,7 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20230724.0",
 		"@typescript-eslint/eslint-plugin": "^6.2.1",
-		"@typescript-eslint/parser": "^5.62.0",
+		"@typescript-eslint/parser": "^6.2.1",
 		"eslint": "^8.46.0",
 		"typescript": "^5.1.6",
 		"wrangler": "^3.4.0"

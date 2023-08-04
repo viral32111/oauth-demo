@@ -1,8 +1,8 @@
 {
 	"compilerOptions": {
-		"sourceRoot": "./scripts/",
+		"sourceRoot": "scripts/",
 		"inlineSourceMap": true,
-		"outDir": "./browser/scripts/",
+		"outDir": "browser/scripts/",
 
 		"module": "es2022",
 		"target": "es2016",

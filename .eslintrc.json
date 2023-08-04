@@ -35,7 +35,7 @@
 		]
 	},
 	"ignorePatterns": [
-		"./node_modules/",
-		"./browser/scripts/"
+		"node_modules/",
+		"browser/scripts/"
 	]
 }
