@@ -6,7 +6,7 @@
 		"lint": "npx eslint .",
 		"build": "npx tsc",
 		"dev": "npx wrangler pages dev --compatibility-date 2023-01-26 --local --ip 127.0.0.1 --port 8000 --live-reload browser",
-		"publish": "npx wrangler pages publish browser",
+		"deploy": "npx wrangler pages deploy --project-name oauth-demo browser",
 		"clean": "rm --verbose --recursive browser/scripts/*.js"
 	},
 	"author": {

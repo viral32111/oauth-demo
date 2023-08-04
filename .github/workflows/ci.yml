@@ -48,8 +48,8 @@ jobs:
           name: ${{ env.ARTIFACT_NAME }}
           path: browser/
 
-  deploy:
-    name: Deploy
+  deploy-github:
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-22.04
     if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
     needs: build
@@ -85,3 +85,37 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deploy-to-pages
         uses: actions/deploy-pages@v2
+
+  deploy-cloudflare:
+    name: Deploy to Cloudflare Pages
+    runs-on: ubuntu-22.04
+    if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
+    needs: build
+    permissions:
+      contents: read
+      deployments: write
+    environment:
+      name: cloudflare-pages
+      url: ${{ steps.deploy-to-pages.outputs.url }}
+    concurrency:
+      group: cloudflare-pages
+      cancel-in-progress: false
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Download browser artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          path: browser
+
+      - name: Deploy to Cloudflare Pages
+        id: deploy-to-pages
+        uses: cloudflare/pages-action@v1
+        with:
+          directory: browser
+          projectName: ${{ github.repository }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
