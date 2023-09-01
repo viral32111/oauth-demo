@@ -31,6 +31,6 @@
 		"@typescript-eslint/parser": "^6.2.1",
 		"eslint": "^8.46.0",
 		"typescript": "^5.1.6",
-		"wrangler": "^3.4.0"
+		"wrangler": "^3.6.0"
 	}
 }
