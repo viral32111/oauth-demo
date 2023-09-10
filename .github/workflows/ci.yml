@@ -3,12 +3,7 @@ name: CI
 on:
   push:
     paths:
-      - 'browser/**/*'
-      - 'functions/**/*'
-      - 'scripts/**/*'
-      - '*.json'
-      - '*.toml'
-      - '.github/workflows/ci.yml'
+      - '**'
     branches:
       - '**'
     tags:
@@ -46,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ env.ARTIFACT_NAME }}
-          path: browser/
+          path: browser
 
   deploy-github:
     name: Deploy to GitHub Pages
