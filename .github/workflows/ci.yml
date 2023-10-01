@@ -21,7 +21,7 @@ jobs:
       contents: read
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -60,7 +60,7 @@ jobs:
       cancel-in-progress: false
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup GitHub Pages
         id: setup-pages
@@ -96,7 +96,7 @@ jobs:
       cancel-in-progress: false
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download browser artifact
         uses: actions/download-artifact@v3
