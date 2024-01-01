@@ -67,7 +67,7 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Download browser artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: browser
@@ -99,7 +99,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Download browser artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: browser
