@@ -64,7 +64,7 @@ jobs:
 
       - name: Setup GitHub Pages
         id: setup-pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Download browser artifact
         uses: actions/download-artifact@v4
