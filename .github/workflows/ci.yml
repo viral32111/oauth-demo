@@ -64,7 +64,7 @@ jobs:
 
       - name: Setup GitHub Pages
         id: setup-pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Download browser artifact
         uses: actions/download-artifact@v8
@@ -79,7 +79,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deploy-to-pages
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
   deploy-cloudflare:
     name: Deploy to Cloudflare Pages
