@@ -27,9 +27,9 @@
 	"private": false,
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250701.0",
-		"@typescript-eslint/eslint-plugin": "^7.0.0",
-		"@typescript-eslint/parser": "^6.20.0",
-		"eslint": "^8.57.1",
+		"@typescript-eslint/eslint-plugin": "^8.65.0",
+		"@typescript-eslint/parser": "^8.65.0",
+		"eslint": "^10.7.0",
 		"typescript": "^5.8.3",
 		"wrangler": "^4.103.0"
 	}
